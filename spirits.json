@@ -1,6 +1,6 @@
 [
     {
-        "name": "River Surges in Sunlight",
+        "name": "Wachende Augen in den Bäumen",
         "description": "A spirit of rivers and sunlight, powerful in growth and movement.",
         "abilities": [
             "1. Use Presence to gain energy.",
@@ -9,7 +9,7 @@
         ]
     },
     {
-        "name": "Earth's Grasp",
+        "name": "Unterirdisch lauernde Reißzähne",
         "description": "A spirit of the earth, sturdy and enduring, able to protect lands.",
         "abilities": [
             "1. Create defensive barriers in your lands.",
@@ -18,7 +18,7 @@
         ]
     },
     {
-        "name": "Lightning's Swift Strike",
+        "name": "Pfeilschneller Blitzschlag",
         "description": "A swift spirit that strikes fear into the hearts of invaders with thunderous power.",
         "abilities": [
             "1. Gain energy rapidly through storms.",
@@ -27,7 +27,7 @@
         ]
     },
     {
-        "name": "Shadows Flicker Like Flame",
+        "name": "Lebenskraft der Erde",
         "description": "A spirit of shadows, using stealth and cunning to protect the land.",
         "abilities": [
             "1. Conceal your presence to evade invaders.",
@@ -36,7 +36,7 @@
         ]
     },
     {
-        "name": "Fire's Fury",
+        "name": "Bodenloser Schlamm der Sümpfe",
         "description": "A fierce spirit that unleashes destruction and chaos among invaders.",
         "abilities": [
             "1. Ignite lands to cause damage.",
@@ -45,7 +45,154 @@
         ]
     },
     {
-        "name": "Ocean's Embrace",
+        "name": "Sonnengenährter Fluss",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Flackernde Schatten",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Wandelndes Ur-Gedächtnis",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Grinsender Gestaltwandler macht Ärger",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Stimme des Donners",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Trotzendes Felsgestein",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Verlockung der tiefsten Wälder",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Wildwucherndes Grün",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Hüter der Verbotenen Wildnis",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },    {
+        "name": "Hoch Aufragender Vulkan",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },    {
+        "name": "Viele bewegen sich als Eines",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },    {
+        "name": "Reisszähne im Dickicht",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Bote der Albträume",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Nebel des leisen Todes",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },
+    {
+        "name": "Hunger des Ozeans",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },    {
+        "name": "Rache in Gestalt brennender Seuche",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },    {
+        "name": "Sternenlicht sucht Gestalt",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    },    {
+        "name": "Tagessplitter teilen den Himmel",
         "description": "A nurturing spirit that uses water to protect and reclaim lands.",
         "abilities": [
             "1. Pull invaders into the depths.",
