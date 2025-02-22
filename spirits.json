@@ -1,0 +1,56 @@
+[
+    {
+        "name": "River Surges in Sunlight",
+        "description": "A spirit of rivers and sunlight, powerful in growth and movement.",
+        "abilities": [
+            "1. Use Presence to gain energy.",
+            "2. Move Dahan and defend against invaders.",
+            "3. Add additional damage when reclaiming lands."
+        ]
+    },
+    {
+        "name": "Earth's Grasp",
+        "description": "A spirit of the earth, sturdy and enduring, able to protect lands.",
+        "abilities": [
+            "1. Create defensive barriers in your lands.",
+            "2. Manipulate the terrain to push invaders.",
+            "3. Strengthen Dahan in adjacent lands."
+        ]
+    },
+    {
+        "name": "Lightning's Swift Strike",
+        "description": "A swift spirit that strikes fear into the hearts of invaders with thunderous power.",
+        "abilities": [
+            "1. Gain energy rapidly through storms.",
+            "2. Strike down invaders with lightning bolts.",
+            "3. Quick movement across the board."
+        ]
+    },
+    {
+        "name": "Shadows Flicker Like Flame",
+        "description": "A spirit of shadows, using stealth and cunning to protect the land.",
+        "abilities": [
+            "1. Conceal your presence to evade invaders.",
+            "2. Manipulate fear among the invaders.",
+            "3. Create illusions to confuse enemies."
+        ]
+    },
+    {
+        "name": "Fire's Fury",
+        "description": "A fierce spirit that unleashes destruction and chaos among invaders.",
+        "abilities": [
+            "1. Ignite lands to cause damage.",
+            "2. Gain energy from destruction.",
+            "3. Create a burning presence that invaders fear."
+        ]
+    },
+    {
+        "name": "Ocean's Embrace",
+        "description": "A nurturing spirit that uses water to protect and reclaim lands.",
+        "abilities": [
+            "1. Pull invaders into the depths.",
+            "2. Use water to heal the land.",
+            "3. Generate tidal waves to displace enemies."
+        ]
+    }
+]
