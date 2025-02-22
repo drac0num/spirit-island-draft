@@ -1,79 +1,87 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let spirits = [];
-    let draftPool = [];
-    let draftResults = [];
-    let currentPlayer = 0;
-    let playerCount = 3;
-    let cardsPerDraft = 3;
-    
-    fetch('spirits.json')
-        .then(response => response.json())
-        .then(data => {
-            spirits = data;
-            draftPool = [...spirits];
-        });
+const spirits = [
+    "Lightning's Swift Strike", "River Surges in Sunlight", "Vital Strength of the Earth", 
+    "Shadows Flicker Like Flame", "Thunderspeaker", "A Spread of Rampant Green", 
+    "Ocean’s Hungry Grasp", "Bringer of Dreams and Nightmares", "Serpent Slumbering Beneath the Island"
+];
 
-    function startDraft() {
-        playerCount = parseInt(document.getElementById("playerCount").value);
-        cardsPerDraft = parseInt(document.getElementById("cardsPerDraft").value);
-        draftResults = Array(playerCount).fill(null);
-        currentPlayer = 0;
-        showDraftOptions();
-        document.getElementById("setup").style.display = "none";
-        document.getElementById("draft").style.display = "block";
-    }
-    
-    function showDraftOptions() {
-        if (currentPlayer >= playerCount) {
-            showResults();
-            return;
-        }
+let availableSpirits = [...spirits];
+let playerCount = 0;
+let cardsPerDraft = 3;
+let currentPlayer = 0;
+let draftResults = [];
 
-        document.getElementById("currentPlayer").innerText = `Player ${currentPlayer + 1}, choose a spirit:`;
-        document.getElementById("spiritOptions").innerHTML = "";
-        document.getElementById("previousPicksList").innerHTML = draftResults
-            .map((pick, index) => pick ? `<li>Player ${index + 1}: ${pick}</li>` : "")
-            .join("");
-        
-        shuffleArray(draftPool);
-        let options = draftPool.slice(0, cardsPerDraft);
-        options.forEach(spirit => {
-            let btn = document.createElement("button");
-            btn.innerText = spirit;
-            btn.onclick = () => selectSpirit(spirit, options);
-            document.getElementById("spiritOptions").appendChild(btn);
-        });
-    }
+function startDraft() {
+    playerCount = parseInt(document.getElementById("playerCount").value);
+    cardsPerDraft = parseInt(document.getElementById("cardsPerDraft").value);
     
-    function selectSpirit(spirit, options) {
-        draftResults[currentPlayer] = spirit;
-        draftPool = draftPool.filter(s => !options.includes(s) || s === spirit);
-        currentPlayer++;
-        showDraftOptions();
-    }
-    
-    function showResults() {
-        document.getElementById("draft").style.display = "none";
-        document.getElementById("results").style.display = "block";
-        document.getElementById("draftResults").innerHTML = draftResults
-            .map((pick, index) => `<li>Player ${index + 1}: ${pick}</li>`)
-            .join("");
-    }
-    
-    function restartDraft() {
-        document.getElementById("setup").style.display = "block";
-        document.getElementById("draft").style.display = "none";
-        document.getElementById("results").style.display = "none";
-        draftPool = [...spirits];
-    }
-    
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
+    if (playerCount < 1 || playerCount > 6) {
+        alert("Please enter a valid number of players (1-6).");
+        return;
     }
 
-    window.startDraft = startDraft;
-    window.restartDraft = restartDraft;
-});
+    draftResults = [];
+    currentPlayer = 0;
+    availableSpirits = [...spirits];
+
+    document.getElementById("setup").style.display = "none";
+    document.getElementById("draft").style.display = "block";
+    
+    nextDraftRound();
+}
+
+function nextDraftRound() {
+    if (currentPlayer >= playerCount) {
+        showResults();
+        return;
+    }
+
+    document.getElementById("currentPlayer").innerText = `Player ${currentPlayer + 1}, pick a spirit:`;
+    const spiritOptionsDiv = document.getElementById("spiritOptions");
+    spiritOptionsDiv.innerHTML = "";
+
+    const draftPool = [];
+    while (draftPool.length < cardsPerDraft && availableSpirits.length > 0) {
+        const randomIndex = Math.floor(Math.random() * availableSpirits.length);
+        draftPool.push(availableSpirits.splice(randomIndex, 1)[0]);
+    }
+
+    draftPool.forEach(spirit => {
+        const button = document.createElement("button");
+        button.innerText = spirit;
+        button.onclick = () => selectSpirit(spirit);
+        spiritOptionsDiv.appendChild(button);
+    });
+
+    document.getElementById("confirmPick").disabled = true;
+}
+
+let selectedSpirit = null;
+function selectSpirit(spirit) {
+    selectedSpirit = spirit;
+    document.getElementById("confirmPick").disabled = false;
+}
+
+function confirmSelection() {
+    draftResults.push({ player: currentPlayer + 1, spirit: selectedSpirit });
+    currentPlayer++;
+    nextDraftRound();
+}
+
+function showResults() {
+    document.getElementById("draft").style.display = "none";
+    document.getElementById("results").style.display = "block";
+
+    const resultsList = document.getElementById("draftResults");
+    resultsList.innerHTML = "";
+
+    draftResults.forEach(result => {
+        const li = document.createElement("li");
+        li.innerText = `Player ${result.player}: ${result.spirit}`;
+        resultsList.appendChild(li);
+    });
+}
+
+function restartDraft() {
+    document.getElementById("results").style.display = "none";
+    document.getElementById("setup").style.display = "block";
+}
