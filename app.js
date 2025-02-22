@@ -6,8 +6,7 @@ const spirits = [
     "Wildwucherndes Grün", "Hüter der Verbotenen Wildnis", "Hoch Aufragender Vulkan",
     "Viele bewegen sich als Eines", "Reisszähne im Dickicht", "Bote der Albträume",
     "Nebel des leisen Todes", "Hunger des Ozeans", "Rache in Gestalt brennender Seuche",
-    "Sternenlicht sucht Gestalt", "Tagessplitter teilen den Himmel",
-
+    "Sternenlicht sucht Gestalt", "Tagessplitter teilen den Himmel"
 ];
 
 let availableSpirits = [...spirits];
@@ -52,18 +51,36 @@ function nextDraftRound() {
     }
 
     draftPool.forEach(spirit => {
-        const button = document.createElement("button");
-        button.innerText = spirit;
-        button.onclick = () => selectSpirit(spirit);
-        spiritOptionsDiv.appendChild(button);
+        const spiritContainer = document.createElement("div");
+        spiritContainer.classList.add("spirit-container");
+        spiritContainer.onclick = () => selectSpirit(spirit, spiritContainer);
+
+        const spiritImg = document.createElement("img");
+        spiritImg.src = `images/${spirit.replace(/\s+/g, "_").toLowerCase()}.jpg`; // Example image path
+        spiritImg.alt = spirit;
+        spiritImg.classList.add("spirit-image");
+
+        const spiritName = document.createElement("p");
+        spiritName.innerText = spirit;
+
+        spiritContainer.appendChild(spiritImg);
+        spiritContainer.appendChild(spiritName);
+        spiritOptionsDiv.appendChild(spiritContainer);
     });
 
     document.getElementById("confirmPick").disabled = true;
 }
 
 let selectedSpirit = null;
-function selectSpirit(spirit) {
+let selectedElement = null;
+
+function selectSpirit(spirit, element) {
+    if (selectedElement) {
+        selectedElement.classList.remove("selected-spirit");
+    }
     selectedSpirit = spirit;
+    selectedElement = element;
+    selectedElement.classList.add("selected-spirit");
     document.getElementById("confirmPick").disabled = false;
 }
 
