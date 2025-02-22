@@ -1,7 +1,13 @@
 const spirits = [
-    "Lightning's Swift Strike", "River Surges in Sunlight", "Vital Strength of the Earth", 
-    "Shadows Flicker Like Flame", "Thunderspeaker", "A Spread of Rampant Green", 
-    "Ocean’s Hungry Grasp", "Bringer of Dreams and Nightmares", "Serpent Slumbering Beneath the Island"
+    "Wachende Augen in den Bäumen", "Unterirdisch lauernde Reißzähne", "Pfeilschneller Blitzschlag", 
+    "Lebenskraft der Erde", "Bodenloser Schlamm der Sümpfe", "Sonnengenährter Fluss", 
+    "Flackernde Schatten", "Wandelndes Ur-Gedächtnis", "Grinsender Gestaltwandler macht Ärger",
+    "Stimme des Donners", "Trotzendes Felsgestein", "Verlockung der tiefsten Wälder", 
+    "Wildwucherndes Grün", "Hüter der Verbotenen Wildnis", "Hoch Aufragender Vulkan",
+    "Viele bewegen sich als Eines", "Reisszähne im Dickicht", "Bote der Albträume",
+    "Nebel des leisen Todes", "Hunger des Ozeans", "Rache in Gestalt brennender Seuche",
+    "Sternenlicht sucht Gestalt", "Tagessplitter teilen den Himmel",
+
 ];
 
 let availableSpirits = [...spirits];
