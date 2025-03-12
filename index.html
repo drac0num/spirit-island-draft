@@ -24,7 +24,7 @@
     
     <div id="setup">
         <label for="playerCount">Number of Players:</label>
-        <input type="number" id="playerCount" min="2" max="6">
+        <input type="number" id="playerCount" min="1" max="6" value="3">
         
         <label for="cardsPerDraft">Cards per Draft:</label>
         <select id="cardsPerDraft">
@@ -41,6 +41,7 @@
     
     <div id="draft" style="display: none;">
         <h2 id="currentPlayer"></h2>
+        <div id="previousPicks"></div>
         <div id="spiritOptions"></div>
         <button id="confirmPick" onclick="confirmSelection()" disabled>Confirm Selection</button>
     </div>
