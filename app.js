@@ -1,3 +1,9 @@
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js")
+        .then(() => console.log("Service Worker registered successfully"))
+        .catch((error) => console.error("Service Worker registration failed:", error));
+}
+
 const spirits = [
     "Wachende Augen in den Bäumen", "Unterirdisch lauernde Reißzähne", "Pfeilschneller Blitzschlag", 
     "Lebenskraft der Erde", "Bodenloser Schlamm der Sümpfe", "Sonnengenährter Fluss", 
